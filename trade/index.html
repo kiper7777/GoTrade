@@ -1,0 +1,3068 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlterHedge</title>
+    <meta
+      name="description"
+      content="Voice Interactive Trading &amp; execution-only automation"
+    />
+
+    <meta name="author" content="AlterHedge" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@alterhedge" />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <meta property="og:title" content="AlterHedge" />
+    <meta name="twitter:title" content="AlterHedge" />
+    <meta
+      property="og:description"
+      content="Voice Interactive Trading &amp; execution-only automation"
+    />
+    <meta
+      name="twitter:description"
+      content="Voice Interactive Trading &amp; execution-only automation"
+    />
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index-CyPz1bZG.js"
+    ></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-D3EUzRDy.css" />
+    <style type="text/css">
+      :where(html[dir="ltr"]),
+      :where([data-sonner-toaster][dir="ltr"]) {
+        --toast-icon-margin-start: -3px;
+        --toast-icon-margin-end: 4px;
+        --toast-svg-margin-start: -1px;
+        --toast-svg-margin-end: 0px;
+        --toast-button-margin-start: auto;
+        --toast-button-margin-end: 0;
+        --toast-close-button-start: 0;
+        --toast-close-button-end: unset;
+        --toast-close-button-transform: translate(-35%, -35%);
+      }
+      :where(html[dir="rtl"]),
+      :where([data-sonner-toaster][dir="rtl"]) {
+        --toast-icon-margin-start: 4px;
+        --toast-icon-margin-end: -3px;
+        --toast-svg-margin-start: 0px;
+        --toast-svg-margin-end: -1px;
+        --toast-button-margin-start: 0;
+        --toast-button-margin-end: auto;
+        --toast-close-button-start: unset;
+        --toast-close-button-end: 0;
+        --toast-close-button-transform: translate(35%, -35%);
+      }
+      :where([data-sonner-toaster]) {
+        position: fixed;
+        width: var(--width);
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica Neue,
+          Arial,
+          Noto Sans,
+          sans-serif,
+          Apple Color Emoji,
+          Segoe UI Emoji,
+          Segoe UI Symbol,
+          Noto Color Emoji;
+        --gray1: hsl(0, 0%, 99%);
+        --gray2: hsl(0, 0%, 97.3%);
+        --gray3: hsl(0, 0%, 95.1%);
+        --gray4: hsl(0, 0%, 93%);
+        --gray5: hsl(0, 0%, 90.9%);
+        --gray6: hsl(0, 0%, 88.7%);
+        --gray7: hsl(0, 0%, 85.8%);
+        --gray8: hsl(0, 0%, 78%);
+        --gray9: hsl(0, 0%, 56.1%);
+        --gray10: hsl(0, 0%, 52.3%);
+        --gray11: hsl(0, 0%, 43.5%);
+        --gray12: hsl(0, 0%, 9%);
+        --border-radius: 8px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        outline: none;
+        z-index: 999999999;
+        transition: transform 0.4s ease;
+      }
+      :where([data-sonner-toaster][data-lifted="true"]) {
+        transform: translateY(-10px);
+      }
+      @media (hover: none) and (pointer: coarse) {
+        :where([data-sonner-toaster][data-lifted="true"]) {
+          transform: none;
+        }
+      }
+      :where([data-sonner-toaster][data-x-position="right"]) {
+        right: var(--offset-right);
+      }
+      :where([data-sonner-toaster][data-x-position="left"]) {
+        left: var(--offset-left);
+      }
+      :where([data-sonner-toaster][data-x-position="center"]) {
+        left: 50%;
+        transform: translate(-50%);
+      }
+      :where([data-sonner-toaster][data-y-position="top"]) {
+        top: var(--offset-top);
+      }
+      :where([data-sonner-toaster][data-y-position="bottom"]) {
+        bottom: var(--offset-bottom);
+      }
+      :where([data-sonner-toast]) {
+        --y: translateY(100%);
+        --lift-amount: calc(var(--lift) * var(--gap));
+        z-index: var(--z-index);
+        position: absolute;
+        opacity: 0;
+        transform: var(--y);
+        filter: blur(0);
+        touch-action: none;
+        transition:
+          transform 0.4s,
+          opacity 0.4s,
+          height 0.4s,
+          box-shadow 0.2s;
+        box-sizing: border-box;
+        outline: none;
+        overflow-wrap: anywhere;
+      }
+      :where([data-sonner-toast][data-styled="true"]) {
+        padding: 16px;
+        background: var(--normal-bg);
+        border: 1px solid var(--normal-border);
+        color: var(--normal-text);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 12px #0000001a;
+        width: var(--width);
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      :where([data-sonner-toast]:focus-visible) {
+        box-shadow:
+          0 4px 12px #0000001a,
+          0 0 0 2px #0003;
+      }
+      :where([data-sonner-toast][data-y-position="top"]) {
+        top: 0;
+        --y: translateY(-100%);
+        --lift: 1;
+        --lift-amount: calc(1 * var(--gap));
+      }
+      :where([data-sonner-toast][data-y-position="bottom"]) {
+        bottom: 0;
+        --y: translateY(100%);
+        --lift: -1;
+        --lift-amount: calc(var(--lift) * var(--gap));
+      }
+      :where([data-sonner-toast]) :where([data-description]) {
+        font-weight: 400;
+        line-height: 1.4;
+        color: inherit;
+      }
+      :where([data-sonner-toast]) :where([data-title]) {
+        font-weight: 500;
+        line-height: 1.5;
+        color: inherit;
+      }
+      :where([data-sonner-toast]) :where([data-icon]) {
+        display: flex;
+        height: 16px;
+        width: 16px;
+        position: relative;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        margin-left: var(--toast-icon-margin-start);
+        margin-right: var(--toast-icon-margin-end);
+      }
+      :where([data-sonner-toast][data-promise="true"])
+        :where([data-icon])
+        > svg {
+        opacity: 0;
+        transform: scale(0.8);
+        transform-origin: center;
+        animation: sonner-fade-in 0.3s ease forwards;
+      }
+      :where([data-sonner-toast]) :where([data-icon]) > * {
+        flex-shrink: 0;
+      }
+      :where([data-sonner-toast]) :where([data-icon]) svg {
+        margin-left: var(--toast-svg-margin-start);
+        margin-right: var(--toast-svg-margin-end);
+      }
+      :where([data-sonner-toast]) :where([data-content]) {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      [data-sonner-toast][data-styled="true"] [data-button] {
+        border-radius: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 24px;
+        font-size: 12px;
+        color: var(--normal-bg);
+        background: var(--normal-text);
+        margin-left: var(--toast-button-margin-start);
+        margin-right: var(--toast-button-margin-end);
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        transition:
+          opacity 0.4s,
+          box-shadow 0.2s;
+      }
+      :where([data-sonner-toast]) :where([data-button]):focus-visible {
+        box-shadow: 0 0 0 2px #0006;
+      }
+      :where([data-sonner-toast]) :where([data-button]):first-of-type {
+        margin-left: var(--toast-button-margin-start);
+        margin-right: var(--toast-button-margin-end);
+      }
+      :where([data-sonner-toast]) :where([data-cancel]) {
+        color: var(--normal-text);
+        background: rgba(0, 0, 0, 0.08);
+      }
+      :where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]) {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      :where([data-sonner-toast]) :where([data-close-button]) {
+        position: absolute;
+        left: var(--toast-close-button-start);
+        right: var(--toast-close-button-end);
+        top: 0;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        color: var(--gray12);
+        border: 1px solid var(--gray4);
+        transform: var(--toast-close-button-transform);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        transition:
+          opacity 0.1s,
+          background 0.2s,
+          border-color 0.2s;
+      }
+      [data-sonner-toast] [data-close-button] {
+        background: var(--gray1);
+      }
+      :where([data-sonner-toast]) :where([data-close-button]):focus-visible {
+        box-shadow:
+          0 4px 12px #0000001a,
+          0 0 0 2px #0003;
+      }
+      :where([data-sonner-toast]) :where([data-disabled="true"]) {
+        cursor: not-allowed;
+      }
+      :where([data-sonner-toast]):hover :where([data-close-button]):hover {
+        background: var(--gray2);
+        border-color: var(--gray5);
+      }
+      :where([data-sonner-toast][data-swiping="true"]):before {
+        content: "";
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        height: 100%;
+        z-index: -1;
+      }
+      :where(
+        [data-sonner-toast][data-y-position="top"][data-swiping="true"]
+      ):before {
+        bottom: 50%;
+        transform: scaleY(3) translateY(50%);
+      }
+      :where(
+        [data-sonner-toast][data-y-position="bottom"][data-swiping="true"]
+      ):before {
+        top: 50%;
+        transform: scaleY(3) translateY(-50%);
+      }
+      :where(
+        [data-sonner-toast][data-swiping="false"][data-removed="true"]
+      ):before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform: scaleY(2);
+      }
+      :where([data-sonner-toast]):after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: calc(var(--gap) + 1px);
+        bottom: 100%;
+        width: 100%;
+      }
+      :where([data-sonner-toast][data-mounted="true"]) {
+        --y: translateY(0);
+        opacity: 1;
+      }
+      :where([data-sonner-toast][data-expanded="false"][data-front="false"]) {
+        --scale: var(--toasts-before) * 0.05 + 1;
+        --y: translateY(calc(var(--lift-amount) * var(--toasts-before)))
+          scale(calc(-1 * var(--scale)));
+        height: var(--front-toast-height);
+      }
+      :where([data-sonner-toast]) > * {
+        transition: opacity 0.4s;
+      }
+      :where(
+          [data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"]
+        )
+        > * {
+        opacity: 0;
+      }
+      :where([data-sonner-toast][data-visible="false"]) {
+        opacity: 0;
+        pointer-events: none;
+      }
+      :where([data-sonner-toast][data-mounted="true"][data-expanded="true"]) {
+        --y: translateY(calc(var(--lift) * var(--offset)));
+        height: var(--initial-height);
+      }
+      :where(
+        [data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]
+      ) {
+        --y: translateY(calc(var(--lift) * -100%));
+        opacity: 0;
+      }
+      :where(
+        [data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]
+      ) {
+        --y: translateY(
+          calc(var(--lift) * var(--offset) + var(--lift) * -100%)
+        );
+        opacity: 0;
+      }
+      :where(
+        [data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]
+      ) {
+        --y: translateY(40%);
+        opacity: 0;
+        transition:
+          transform 0.5s,
+          opacity 0.2s;
+      }
+      :where(
+        [data-sonner-toast][data-removed="true"][data-front="false"]
+      ):before {
+        height: calc(var(--initial-height) + 20%);
+      }
+      [data-sonner-toast][data-swiping="true"] {
+        transform: var(--y) translateY(var(--swipe-amount-y, 0px))
+          translate(var(--swipe-amount-x, 0px));
+        transition: none;
+      }
+      [data-sonner-toast][data-swiped="true"] {
+        user-select: none;
+      }
+      [data-sonner-toast][data-swipe-out="true"][data-y-position="bottom"],
+      [data-sonner-toast][data-swipe-out="true"][data-y-position="top"] {
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+      [data-sonner-toast][data-swipe-out="true"][data-swipe-direction="left"] {
+        animation-name: swipe-out-left;
+      }
+      [data-sonner-toast][data-swipe-out="true"][data-swipe-direction="right"] {
+        animation-name: swipe-out-right;
+      }
+      [data-sonner-toast][data-swipe-out="true"][data-swipe-direction="up"] {
+        animation-name: swipe-out-up;
+      }
+      [data-sonner-toast][data-swipe-out="true"][data-swipe-direction="down"] {
+        animation-name: swipe-out-down;
+      }
+      @keyframes swipe-out-left {
+        0% {
+          transform: var(--y) translate(var(--swipe-amount-x));
+          opacity: 1;
+        }
+        to {
+          transform: var(--y) translate(calc(var(--swipe-amount-x) - 100%));
+          opacity: 0;
+        }
+      }
+      @keyframes swipe-out-right {
+        0% {
+          transform: var(--y) translate(var(--swipe-amount-x));
+          opacity: 1;
+        }
+        to {
+          transform: var(--y) translate(calc(var(--swipe-amount-x) + 100%));
+          opacity: 0;
+        }
+      }
+      @keyframes swipe-out-up {
+        0% {
+          transform: var(--y) translateY(var(--swipe-amount-y));
+          opacity: 1;
+        }
+        to {
+          transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+          opacity: 0;
+        }
+      }
+      @keyframes swipe-out-down {
+        0% {
+          transform: var(--y) translateY(var(--swipe-amount-y));
+          opacity: 1;
+        }
+        to {
+          transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+          opacity: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        [data-sonner-toaster] {
+          position: fixed;
+          right: var(--mobile-offset-right);
+          left: var(--mobile-offset-left);
+          width: 100%;
+        }
+        [data-sonner-toaster][dir="rtl"] {
+          left: calc(var(--mobile-offset-left) * -1);
+        }
+        [data-sonner-toaster] [data-sonner-toast] {
+          left: 0;
+          right: 0;
+          width: calc(100% - var(--mobile-offset-left) * 2);
+        }
+        [data-sonner-toaster][data-x-position="left"] {
+          left: var(--mobile-offset-left);
+        }
+        [data-sonner-toaster][data-y-position="bottom"] {
+          bottom: var(--mobile-offset-bottom);
+        }
+        [data-sonner-toaster][data-y-position="top"] {
+          top: var(--mobile-offset-top);
+        }
+        [data-sonner-toaster][data-x-position="center"] {
+          left: var(--mobile-offset-left);
+          right: var(--mobile-offset-right);
+          transform: none;
+        }
+      }
+      [data-sonner-toaster][data-theme="light"] {
+        --normal-bg: #fff;
+        --normal-border: var(--gray4);
+        --normal-text: var(--gray12);
+        --success-bg: hsl(143, 85%, 96%);
+        --success-border: hsl(145, 92%, 91%);
+        --success-text: hsl(140, 100%, 27%);
+        --info-bg: hsl(208, 100%, 97%);
+        --info-border: hsl(221, 91%, 91%);
+        --info-text: hsl(210, 92%, 45%);
+        --warning-bg: hsl(49, 100%, 97%);
+        --warning-border: hsl(49, 91%, 91%);
+        --warning-text: hsl(31, 92%, 45%);
+        --error-bg: hsl(359, 100%, 97%);
+        --error-border: hsl(359, 100%, 94%);
+        --error-text: hsl(360, 100%, 45%);
+      }
+      [data-sonner-toaster][data-theme="light"]
+        [data-sonner-toast][data-invert="true"] {
+        --normal-bg: #000;
+        --normal-border: hsl(0, 0%, 20%);
+        --normal-text: var(--gray1);
+      }
+      [data-sonner-toaster][data-theme="dark"]
+        [data-sonner-toast][data-invert="true"] {
+        --normal-bg: #fff;
+        --normal-border: var(--gray3);
+        --normal-text: var(--gray12);
+      }
+      [data-sonner-toaster][data-theme="dark"] {
+        --normal-bg: #000;
+        --normal-bg-hover: hsl(0, 0%, 12%);
+        --normal-border: hsl(0, 0%, 20%);
+        --normal-border-hover: hsl(0, 0%, 25%);
+        --normal-text: var(--gray1);
+        --success-bg: hsl(150, 100%, 6%);
+        --success-border: hsl(147, 100%, 12%);
+        --success-text: hsl(150, 86%, 65%);
+        --info-bg: hsl(215, 100%, 6%);
+        --info-border: hsl(223, 100%, 12%);
+        --info-text: hsl(216, 87%, 65%);
+        --warning-bg: hsl(64, 100%, 6%);
+        --warning-border: hsl(60, 100%, 12%);
+        --warning-text: hsl(46, 87%, 65%);
+        --error-bg: hsl(358, 76%, 10%);
+        --error-border: hsl(357, 89%, 16%);
+        --error-text: hsl(358, 100%, 81%);
+      }
+      [data-sonner-toaster][data-theme="dark"]
+        [data-sonner-toast]
+        [data-close-button] {
+        background: var(--normal-bg);
+        border-color: var(--normal-border);
+        color: var(--normal-text);
+      }
+      [data-sonner-toaster][data-theme="dark"]
+        [data-sonner-toast]
+        [data-close-button]:hover {
+        background: var(--normal-bg-hover);
+        border-color: var(--normal-border-hover);
+      }
+      [data-rich-colors="true"][data-sonner-toast][data-type="success"],
+      [data-rich-colors="true"][data-sonner-toast][data-type="success"]
+        [data-close-button] {
+        background: var(--success-bg);
+        border-color: var(--success-border);
+        color: var(--success-text);
+      }
+      [data-rich-colors="true"][data-sonner-toast][data-type="info"],
+      [data-rich-colors="true"][data-sonner-toast][data-type="info"]
+        [data-close-button] {
+        background: var(--info-bg);
+        border-color: var(--info-border);
+        color: var(--info-text);
+      }
+      [data-rich-colors="true"][data-sonner-toast][data-type="warning"],
+      [data-rich-colors="true"][data-sonner-toast][data-type="warning"]
+        [data-close-button] {
+        background: var(--warning-bg);
+        border-color: var(--warning-border);
+        color: var(--warning-text);
+      }
+      [data-rich-colors="true"][data-sonner-toast][data-type="error"],
+      [data-rich-colors="true"][data-sonner-toast][data-type="error"]
+        [data-close-button] {
+        background: var(--error-bg);
+        border-color: var(--error-border);
+        color: var(--error-text);
+      }
+      .sonner-loading-wrapper {
+        --size: 16px;
+        height: var(--size);
+        width: var(--size);
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+      }
+      .sonner-loading-wrapper[data-visible="false"] {
+        transform-origin: center;
+        animation: sonner-fade-out 0.2s ease forwards;
+      }
+      .sonner-spinner {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        height: var(--size);
+        width: var(--size);
+      }
+      .sonner-loading-bar {
+        animation: sonner-spin 1.2s linear infinite;
+        background: var(--gray11);
+        border-radius: 6px;
+        height: 8%;
+        left: -10%;
+        position: absolute;
+        top: -3.9%;
+        width: 24%;
+      }
+      .sonner-loading-bar:nth-child(1) {
+        animation-delay: -1.2s;
+        transform: rotate(0.0001deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(2) {
+        animation-delay: -1.1s;
+        transform: rotate(30deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(3) {
+        animation-delay: -1s;
+        transform: rotate(60deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(4) {
+        animation-delay: -0.9s;
+        transform: rotate(90deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(5) {
+        animation-delay: -0.8s;
+        transform: rotate(120deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(6) {
+        animation-delay: -0.7s;
+        transform: rotate(150deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(7) {
+        animation-delay: -0.6s;
+        transform: rotate(180deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(8) {
+        animation-delay: -0.5s;
+        transform: rotate(210deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(9) {
+        animation-delay: -0.4s;
+        transform: rotate(240deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(10) {
+        animation-delay: -0.3s;
+        transform: rotate(270deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(11) {
+        animation-delay: -0.2s;
+        transform: rotate(300deg) translate(146%);
+      }
+      .sonner-loading-bar:nth-child(12) {
+        animation-delay: -0.1s;
+        transform: rotate(330deg) translate(146%);
+      }
+      @keyframes sonner-fade-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes sonner-fade-out {
+        0% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+      }
+      @keyframes sonner-spin {
+        0% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.15;
+        }
+      }
+      @media (prefers-reduced-motion) {
+        [data-sonner-toast],
+        [data-sonner-toast] > *,
+        .sonner-loading-bar {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+      .sonner-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .sonner-loader[data-visible="false"] {
+        opacity: 0;
+        transform: scale(0.8) translate(-50%, -50%);
+      }
+    </style>
+    <style type="text/css">
+      :root img[width="728"][height="90"],
+      :root [href="https://adstub.net/cina777/"],
+      :root [href="https://adstub.net/arab777/"],
+      :root [href="https://adstub.net/ratu89/"],
+      :root [href="https://adstub.net/judi89/"],
+      :root [href^="//mage98rquewz.com/"],
+      :root [href^="//x4pollyxxpush.com/"],
+      :root div.content-showcase-itru-sufficient-2d:not(.q7d5z1l):not(.x9a7b3k),
+      :root div[class*="publift-widget-"]:has(.fuse-slot-sticky),
+      :root span[id^="ezoic-pub-ad-placeholder-"],
+      :root ins.adsbygoogle[data-ad-slot],
+      :root ins.adsbygoogle[data-ad-client],
+      :root img[src^="https://s-img.adskeeper.com/"],
+      :root guj-ad,
+      :root gpt-ad,
+      :root div[ow-ad-unit-wrapper],
+      :root div[id^="zergnet-widget"],
+      :root div[id^="vuukle-ad-"],
+      :root div[id^="taboola-stream-"],
+      :root div[id^="sticky_ad_"],
+      :root div[id^="st"][style^="z-index: 999999999;"],
+      :root div[id^="rc-widget-"],
+      :root div[id^="mrec-leaderboard-"],
+      :root div[id^="gpt_ad_"],
+      :root div[id^="ezoic-pub-ad-"],
+      :root div[id^="dfp-ad-"],
+      :root div[id^="crt-"][style],
+      :root div[id^="apn_native_ad_slot_"],
+      :root div[id^="adspot-"],
+      :root div[id^="adrotate_widgets-"],
+      :root ps-connatix-module,
+      :root div[id^="ad_position_"],
+      :root div[id^="ad-div-"],
+      :root div[id*="ScriptRoot"],
+      :root div[id*="MarketGid"],
+      :root [href="https://adstub.net/rusia777/"],
+      :root div[data-id-advertdfpconf],
+      :root div[data-dfp-id],
+      :root hl-adsense,
+      :root div[data-contentexchange-widget],
+      :root div[data-alias="300x250 Ad 2"],
+      :root div[data-adunit-path],
+      :root div[data-adname],
+      :root div[data-ad-placeholder],
+      :root a[href^="https://osfultrbriolenai.info/"],
+      :root div[class^="Adstyled__AdWrapper-"],
+      :root a[href^="https://go.xlviiirdr.com"],
+      :root div[class$="-adlabel"],
+      :root display-ads,
+      :root a[href^="https://go.grinsbest.com/"],
+      :root citrus-ad-wrapper,
+      :root a[href^="https://s.zlinkd.com/"],
+      :root bottomadblock,
+      :root amp-fx-flying-carpet,
+      :root amp-embed[type="taboola"],
+      :root amp-connatix-player,
+      :root div[id^="google_dfp_"],
+      :root ad-slot,
+      :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],
+      :root a[href^="https://www.privateinternetaccess.com/"] > img,
+      :root a[href^="https://www.onlineusershielder.com/"],
+      :root a[href^="https://financeads.net/tc.php?"],
+      :root a[href^="https://www.mrskin.com/tour"],
+      :root a[href^="https://www.infowarsstore.com/"] > img,
+      :root a[href^="https://ak.psaltauw.net/"],
+      :root broadstreet-zone-container,
+      :root a[href^="https://www.highperformancecpmgate.com/"],
+      :root amp-ad,
+      :root a[href^="https://www.highcpmrevenuenetwork.com/"],
+      :root a[href^="https://www.get-express-vpn.com/offer/"],
+      :root a[href^="https://lnkxt.bannerator.com/"],
+      :root a[href^="https://www.geekbuying.com/dynamic-ads/"],
+      :root [href^="https://groorsoa.net/"],
+      :root a[href^="https://www.financeads.net/tc.php?"],
+      :root a[href^="https://www.effectiveratecpm.com/"],
+      :root [href^="https://www.herbanomic.com/"] > img,
+      :root a[href^="https://www.dql2clk.com/"],
+      :root a[href^="https://www.nutaku.net/signup/landing/"],
+      :root a[href^="https://www.dating-finder.com/signup/?ai_d="],
+      :root a[href^="https://explore-site.com/"],
+      :root a[href^="https://www.brazzersnetwork.com/landing/"],
+      :root [data-template-type="nativead"],
+      :root a[href^="https://www.adultempire.com/"][href*="?partner_id="],
+      :root a[href^="https://voluum.prom-xcams.com/"],
+      :root a[href^="https://twinrdsyte.com/"],
+      :root div[data-type="_mgwidget"]:not(.eyeo),
+      :root a[href^="https://twinrdsrv.com/"],
+      :root a[href^="https://syndicate.contentsserved.com/"],
+      :root div[data-alias="300x250 Ad 1"],
+      :root a[href^="https://trk.nfl-online-streams.club/"],
+      :root a[href^="https://tracking.avapartner.com/"],
+      :root a[href^="https://track.wg-aff.com"],
+      :root a[href^="https://track.ultravpn.com/"],
+      :root a[href^="https://track.afcpatrk.com/"],
+      :root a[href^="https://track.adform.net/"],
+      :root a[href^="https://torguard.net/aff.php"] > img,
+      :root [data-identity="adhesive-ad"],
+      :root a[href^="https://tc.tradetracker.net/"] > img,
+      :root a[href^="https://tatrck.com/"],
+      :root [href^="https://zstacklife.com/"] img,
+      :root a[href^="https://click.candyoffers.com/"],
+      :root a[href^="https://t.aslnk.link/"],
+      :root
+        a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"],
+      :root a[href^="https://t.ajump1.com/"],
+      :root a[href^="https://t.adating.link/"],
+      :root a[href^="https://go.trackitalltheway.com/"],
+      :root [href^="https://track.fiverr.com/visit/"] > img,
+      :root a[href^="https://syndication.exoclick.com/"],
+      :root a[href^="https://syndication.dynsrvtbg.com/"],
+      :root .gnt_em_vp_c[data-g-s="vp_dk"],
+      :root div[data-ad-wrapper],
+      :root a[href^="https://svb-analytics.trackerrr.com/"],
+      :root
+        a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"]
+        + .ob_source,
+      :root a[href^="http://www.iyalc.com/"],
+      :root a[href^="https://claring-loccelkin.com/"],
+      :root a[href^="https://stardomcoit.com/"],
+      :root a[href^="https://track.aftrk5.com/"],
+      :root a[href^="https://slkmis.com/"],
+      :root a[href^="https://myclick-2.com/"],
+      :root a[href^="https://sexynearme.com/"],
+      :root [data-ad-manager-id],
+      :root a[href^="https://s.zlinkr.com/"],
+      :root [href="https://adstub.net/gaza88/"],
+      :root a[href^="https://ad.doubleclick.net/"],
+      :root a[href^="https://static.fleshlight.com/images/banners/"],
+      :root a[href^="https://s.zlink7.com/"],
+      :root a[href^="https://s.ma3ion.com/"],
+      :root a[href^="https://s.eunow4u.com/"],
+      :root a[href^="https://random-affiliate.atimaze.com/"],
+      :root #kt_player > div[style$="display: block;"][style*="inset: 0px;"],
+      :root [href$="/sexdating.php"],
+      :root a[href^="https://quotationfirearmrevision.com/"],
+      :root a[href^="https://pubads.g.doubleclick.net/"],
+      :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img,
+      :root a[href^="https://serve.awmdelivery.com/"],
+      :root a[href^="https://www.dating-finder.com/?ai_d="],
+      :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img,
+      :root [href^="https://ap.octopuspop.com/click/"] > img,
+      :root app-ad,
+      :root a[href^="https://postback1win.com/"],
+      :root a[href^="https://a.adtng.com/"],
+      :root a[href^="https://playnano.online/offerwalls/?ref="],
+      :root a[href^="https://mmwebhandler.aff-online.com/"],
+      :root a[href^="https://www.bet365.com/"][href*="affiliate="],
+      :root a[href^="https://pb-track.com/"],
+      :root a[href^="https://pb-front.com/"],
+      :root a[href^="https://paid.outbrain.com/network/redir?"],
+      :root a[href^="https://streamate.com/landing/click/"],
+      :root a[href^="https://upsups.click/"],
+      :root a[href^="https://ndt5.net/"],
+      :root a[href^="https://natour.naughtyamerica.com/track/"],
+      :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],
+      :root [data-ad-name],
+      :root a[href^="https://loboclick.com/"],
+      :root a[href^="https://lead1.pl/"],
+      :root a[href^="https://landing.brazzersnetwork.com/"],
+      :root a[href^="https://juicyads.in/"],
+      :root a[href^="https://snowdayonline.xyz/"],
+      :root a[href^="https://join.dreamsexworld.com/"],
+      :root a[href^="https://join.bannedsextapes.com/track/"],
+      :root a[href^="https://jaxofuna.com/"],
+      :root a[href^="https://italarizege.xyz/"],
+      :root a[href^="https://identicaldrench.com/"],
+      :root ad-shield-ads,
+      :root a[href^="https://hot-growngames.life/"],
+      :root a[href^="https://helmethomicidal.com/"],
+      :root display-ad-component,
+      :root a[href^="https://golinks.work/"],
+      :root a[href^="https://s.zlinkn.com/"],
+      :root a[href^="https://go.xxxvjmp.com/"],
+      :root a[href^="https://go.xxxjmp.com"],
+      :root a[href^="https://zirdough.net/"],
+      :root [class^="tile-picker__CitrusBannerContainer-sc-"],
+      :root a[href^="https://go.xxxiijmp.com"],
+      :root a[href^="https://go.xtbaffiliates.com/"],
+      :root [data-role="tile-ads-module"],
+      :root a[href^="https://go.xlviirdr.com"],
+      :root a[href^="https://go.xlivrdr.com"],
+      :root a[href^="https://ismlks.com/"],
+      :root [href^="https://www.mypillow.com/"] > img,
+      :root a[href^="https://go.xlirdr.com"],
+      :root [data-css-class="dfp-inarticle"],
+      :root a[href^="https://go.tmrjmp.com"],
+      :root a[href^="https://go.markets.com/visit/?bta="],
+      :root a[href^="https://billing.purevpn.com/aff.php"] > img,
+      :root a[href^="https://go.hpyrdr.com/"],
+      :root a[href^="https://lijavaxa.com/"],
+      :root a[href^="https://go.goaserv.com/"],
+      :root app-large-ad,
+      :root [href^="https://turtlebids.irauctions.com/"] img,
+      :root div[data-adunit],
+      :root a[href^="https://go.etoro.com/"] > img,
+      :root a[href^="https://go.dmzjmp.com"],
+      :root a[href^="https://www.bang.com/?aff="],
+      :root #mgb-container > #mgb,
+      :root a[href^="https://go.admjmp.com"],
+      :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,
+      :root a[href^="https://datewhisper.life/"],
+      :root a[href^="https://click.linksynergy.com/fs-bin/"] > img,
+      :root a[href^="https://get-link.xyz/"],
+      :root a[href^="https://www.mrskin.com/account/"],
+      :root a[href^="https://www.adskeeper.com"],
+      :root a[data-redirect^="https://paid.outbrain.com/network/redir?"],
+      :root [href^="https://clicks.affstrack.com/"] > img,
+      :root a[href^="https://engine.phn.doublepimp.com/"],
+      :root a[href^="https://dl-protect.net/"],
+      :root a[href*=".foxqck.com/"],
+      :root a[href^="https://ctosrd.com/"],
+      :root a[href^="https://go.bushheel.com/"],
+      :root a[href^="https://ctjdwm.com/"],
+      :root [href="//sexcams.plus/"],
+      :root a[href^="https://camfapr.com/landing/click/"],
+      :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,
+      :root a[href*="&maxads="],
+      :root
+        a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],
+      :root a[href^="https://1betandgonow.com/"],
+      :root a[href^="https://chaturbate.com/in/?"],
+      :root a[href^="https://t.ajrkm1.com/"],
+      :root a[href^="https://bongacams10.com/track?"],
+      :root a[href*=".g2afse.com/"],
+      :root a[href^="https://bodelen.com/"],
+      :root a[href^="//hoodingluster.com/"],
+      :root a[href^="https://black77854.com/"],
+      :root a[href^="https://getmatchedlocally.com/"],
+      :root app-advertisement,
+      :root a[href^="https://rixofa.com/"],
+      :root a[href^="https://best-experience-cool.com/"],
+      :root [data-taboola-options],
+      :root a[href^="https://believessway.com/"],
+      :root a[href^="https://Click.ggpickaff.com/"],
+      :root a[href^="https://banners.livepartners.com/"],
+      :root a[href^="http://revolvemockerycopper.com/"],
+      :root a[href^="https://awptjmp.com/"],
+      :root a[href^="https://join.sexworld3d.com/track/"],
+      :root a[href^="https://aweptjmp.com/"],
+      :root a[href^="https://ausoafab.net/"],
+      :root a[href^="https://clicks.pipaffiliates.com/"],
+      :root a[href^="https://aj1070.online/"],
+      :root a[href^="https://a.bestcontentoperation.top/"],
+      :root a[href^="https://adultfriendfinder.com/go/"],
+      :root a[href^="https://ads.planetwin365affiliate.com/"],
+      :root a[href^="https://ads.leovegas.com/"],
+      :root a[href^="https://go.xlvirdr.com"],
+      :root img[src^="https://images.purevpnaffiliates.com"],
+      :root a[href^="https://porntubemate.com/"],
+      :root a[href^="https://click.dtiserv2.com/"],
+      :root a[href^="https://clickadilla.com/"],
+      :root a[href^="https://a.medfoodhome.com/"],
+      :root a[href^="https://cam4com.go2cloud.org/"],
+      :root .nya-slot[style],
+      :root a[href^="https://a.bestcontentweb.top/"],
+      :root atf-ad-slot,
+      :root a[href^="https://a2.adform.net/"],
+      :root a[href^="https://a.candyai.love/"],
+      :root .banner-img > .pbl,
+      :root [data-m-ad-id],
+      :root a[href^="https://a-ads.com/"],
+      :root a[href^="https://1winpb.com/"],
+      :root div[id^="optidigital-adslot"],
+      :root [href^="https://wsup.ai/"],
+      :root a[href^="https://123-stream.org/"],
+      :root a[href^="https://in.rabbtrk.com/"],
+      :root a[href^="http://www.h4trck.com/"],
+      :root [href^="https://a.acebet.com/api/click?"],
+      :root a[href^="http://www.friendlyduck.com/AF_"],
+      :root a[href^="http://partners.etoro.com/"],
+      :root [href="https://chaturbate.jjgirls.com/"] > img,
+      :root a[href^="http://cam4com.go2cloud.org/aff_c?"],
+      :root a[href^="https://ads.betfair.com/redirect.aspx?"],
+      :root amp-ad-custom,
+      :root a[href^="http://trk.globwo.online/"],
+      :root
+        a[onclick^="window.location.replace('https://random-affiliate.atimaze.com/"],
+      :root a[href^="https://bongacams2.com/track?"],
+      :root a-ad,
+      :root a[href^="https://offhandpump.com/"],
+      :root a[href^="http://stickingrepute.com/"],
+      :root #slashboxes > .deals-rail,
+      :root div[aria-label="Ads"],
+      :root [href^="http://mypillow.com/"] > img,
+      :root a[href^="http://bongacams.com/track?"],
+      :root a[href^="//startgaming.net/tienda/" i],
+      :root a[href^="https://a.medfoodsafety.com/"],
+      :root a[href^="//go.eabids.com/"],
+      :root a[href^=" https://www.friendlyduck.com/AF_"],
+      :root [data-cl-spot-id],
+      :root a[href*="/jump/next.php?r="],
+      :root a[href^="https://go.nordvpn.net/aff"] > img,
+      :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\],
+      :root [href^="http://clicks.totemcash.com/"],
+      :root a[href^="https://ad.zanox.com/ppc/"] > img,
+      :root [data-d-ad-id],
+      :root a[href*=".engine.adglare.net/"],
+      :root div[id^="lazyad-"],
+      :root a[href^="http://com-1.pro/"],
+      :root [href^="https://www.profitablegatecpm.com/"],
+      :root a[href*=".cfm?domain="][href*="&fp="],
+      :root a[href^="https://ab.advertiserurl.com/aff/"],
+      :root a[data-oburl^="https://paid.outbrain.com/network/redir?"],
+      :root [id^="section-ad-banner"],
+      :root [id^="ad_slider"],
+      :root
+        a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],
+      :root a[href^="https://wmctjd.com/"],
+      :root a[href*="//jjgirls.com/sex/Chaturbate"],
+      :root [id^="ad-wrap-"],
+      :root [href^="https://zone.gotrackier.com/"],
+      :root a[href^="http://sarcasmadvisor.com/"],
+      :root [href^="https://www.restoro.com/"],
+      :root a[href^="https://track.totalav.com/"],
+      :root a[href^="https://ctrdwm.com/"],
+      :root [href^="https://www.targetingpartner.com/"],
+      :root a[href^="https://join.virtuallust3d.com/"],
+      :root .section-subheader > .section-hotel-prices-header,
+      :root [href^="https://www.hostg.xyz/"] > img,
+      :root a[href^="https://bngpt.com/"],
+      :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],
+      :root a[href^="http://adultfriendfinder.com/go/"],
+      :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],
+      :root a[href^="https://tour.mrskin.com/"],
+      :root div[id^="ad-position-"],
+      :root a[href^="https://www.toprevenuegate.com/"],
+      :root a[href^="https://bc.game/"],
+      :root a[href^="http://join.brokestraightboys.com/track/"],
+      :root div[id^="div-ads-"],
+      :root [href^="https://rapidgator.net/article/premium/ref/"],
+      :root [href^="https://join.girlsoutwest.com/"],
+      :root a[href^="https://activate-game.com/"],
+      :root .scroll-fixable.rail-right > .deals-rail,
+      :root [data-wpas-zoneid],
+      :root a[href^="https://track.aftrk3.com/"],
+      :root [href^="https://join3.bannedsextapes.com"],
+      :root div[data-adzone],
+      :root div[id^="adngin-"],
+      :root [data-rc-widget],
+      :root span[data-ez-ph-id],
+      :root [href^="https://track.aftrk1.com/"],
+      :root [href^="https://join.playboyplus.com/track/"],
+      :root a[href^="https://go.xxxijmp.com"],
+      :root [href^="https://istlnkcl.com/"],
+      :root a[href^="https://trk.softonixs.xyz/"],
+      :root a[href^="https://iqbroker.com/"][href*="?aff="],
+      :root [href^="https://rpwmct.com/"],
+      :root [href^="https://wct.link/click?"],
+      :root a[href^="https://t.acam.link/"],
+      :root a[href^="https://go.strpjmp.com/"],
+      :root [href^="https://url.totaladblock.com/"],
+      :root a[href^="https://go.rmishe.com/"],
+      :root [href^="https://ilovemyfreedoms.com/landing-"],
+      :root [href="https://adstub.net/indo666/"],
+      :root [href^="https://glersakr.com/"],
+      :root a[href^="https://tm-offers.gamingadult.com/"],
+      :root [href^="https://charmingdatings.life/"],
+      :root [data-id^="div-gpt-ad"],
+      :root a[href^="https://tracker.loropartners.com/"],
+      :root [href^="https://awbbjmp.com/"],
+      :root a[href^="https://www.friendlyduck.com/AF_"],
+      :root [href^="https://ad1.adfarm1.adition.com/"],
+      :root a[href^="https://t.ajrkm3.com/"],
+      :root [href^="https://aads.com/campaigns/"],
+      :root a[href^="https://fc.lc/ref/"],
+      :root a[href^="https://go.bbrdbr.com"],
+      :root a[href^="http://tc.tradetracker.net/"] > img,
+      :root a[href^="https://s.zlink3.com/"],
+      :root a[href^="http://sneakyadministration.com/"],
+      :root [href^="https://www.brighteonstore.com/products/"] img,
+      :root a[href^="https://bngprm.com/"],
+      :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img,
+      :root [href^="http://www.mypillow.com/"] > img,
+      :root .ob_container .item-container-obpd,
+      :root [id^="div-gpt-ad"],
+      :root [href="https://jdrucker.com/gold"] > img,
+      :root a[href^="https://join.virtualtaboo.com/track/"],
+      :root [id^="ad_sky"],
+      :root [name^="google_ads_iframe"],
+      :root aside[id^="adrotate_widgets-"],
+      :root a[href^="https://www.liquidfire.mobi/"],
+      :root DFP-AD,
+      :root .grid > .container > #aside-promotion,
+      :root [data-type="ad-vertical"],
+      :root [href^="https://go.xlrdr.com"],
+      :root a[href^="https://s.cant3am.com/"],
+      :root [data-testid^="taboola-"],
+      :root [data-testid^="section-AdRowBillboard"],
+      :root a[href^="https://track.1234sd123.com/"],
+      :root zeus-ad,
+      :root [data-testid="prism-ad-wrapper"],
+      :root [href^="https://ad.admitad.com/"],
+      :root [href^="https://mypillow.com/"] > img,
+      :root [data-testid="ad_testID"],
+      :root [data-mobile-ad-id],
+      :root [data-dynamic-ads],
+      :root a[href^="https://gamingadlt.com/?offer="],
+      :root [data-desktop-ad-id],
+      :root a[href^="https://go.rmhfrtnd.com"],
+      :root a[href^="https://pb-imc.com/"],
+      :root a[href^="https://www8.smartadserver.com/"],
+      :root topadblock,
+      :root a[href^="//s.zlinkd.com/"],
+      :root [href^="https://mypatriotsupply.com/"] > img,
+      :root [data-testid="adBanner-wrapper"],
+      :root [href^="https://mylead.global/stl/"] > img,
+      :root a[href*=".adsrv.eacdn.com/"],
+      :root [href^="https://antiagingbed.com/discount/"] > img,
+      :root #teaser1[style^="width:autopx;"],
+      :root [href^="https://www.cloudways.com/en/?id"],
+      :root [data-asg-ins],
+      :root [data-block-type="ad"],
+      :root [data-ad-width],
+      :root a[href^="https://clickins.slixa.com/"],
+      :root [onclick*="content.ad/"],
+      :root a[href^="https://go.cmtaffiliates.com/"],
+      :root [href^="https://optimizedelite.com/"] > img,
+      :root div[data-ad-region],
+      :root AMP-AD,
+      :root [data-ad-cls],
+      :root a[href^="https://www.adxsrve.com/"],
+      :root a[href^="https://click.Ggpickaff.com/"],
+      :root [data-ez-name],
+      :root a[href^="https://go.mnaspm.com/"],
+      :root a[href^="https://service.bv-aff-trx.com/"],
+      :root a[href^="https://6-partner.com/"],
+      :root [class^="s2nPlayer"],
+      :root [href^="https://affiliate.fastcomet.com/"] > img,
+      :root [class^="adDisplay-module"],
+      :root a[href^="https://adclick.g.doubleclick.net/"],
+      :root [data-freestar-ad][id],
+      :root AD-SLOT,
+      :root a[href^="https://combodef.com/"],
+      :root a[href^="https://click.hoolig.app/"],
+      :root a[href^="https://www.googleadservices.com/pagead/aclk?"] > img,
+      :root [data-ad-module],
+      :root a[href^="https://a.bestcontentfood.top/"],
+      :root #kt_player > a[target="_blank"],
+      :root a[href^="https://go.skinstrip.net"][href*="?campaignId="],
+      :root #teaser2[style^="width:autopx;"],
+      :root [data-revive-zoneid],
+      :root a[href^="https://losingoldfry.com/"],
+      :root div[id^="div-gpt-"],
+      :root a[href^="https://gml-grp.com/"],
+      :root .ob_dual_right > .ob_ads_header ~ .odb_div,
+      :root div[data-ad-targeting],
+      :root
+        a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"],
+      :root [href^="https://www.avantlink.com/click.php"] img,
+      :root [data-testid="commercial-label-taboola"],
+      :root [class^="div-gpt-ad"],
+      :root a[href^="https://traffdaq.com/"],
+      :root #teaser3[style^="width:autopx;"],
+      :root a[href^="https://go.hpyjmp.com"],
+      :root
+        iframe[scrolling="no"][sandbox*="allow-popups allow-modals"][style^="width: 100%; height: 100%; border: none;"],
+      :root [href^="https://mystore.com/"] > img,
+      :root [class^="amp-ad-"],
+      :root div[id*="ScriptRoot"]:not(.eyeo),
+      :root a[href^="https://clixtrac.com/"],
+      :root a[href^="https://wittered-mainging.com/"],
+      :root
+        #teaser3[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"] {
+        display: none !important;
+      }
+    </style>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+    </style>
+    <style></style>
+    <style>
+      /* Toggle A */
+      input:checked ~ .dot {
+        transform: translateX(100%);
+        background-color: #48bb78;
+      }
+
+      /* Toggle B */
+      input:checked ~ .dot {
+        transform: translateX(100%);
+        background-color: #48bb78;
+      }
+    </style>
+    <style type="text/css">
+      .lf-progress {
+        -webkit-appearance: none;
+        -moz-apperance: none;
+        width: 100%;
+        /* margin: 0 10px; */
+        height: 4px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .lf-progress:focus {
+        outline: none;
+        border: none;
+      }
+      .lf-progress::-moz-range-track {
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+      }
+      .lf-progress::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        height: 13px;
+        width: 13px;
+        border: 0;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+      .lf-progress::-moz-range-thumb {
+        -moz-appearance: none !important;
+        height: 13px;
+        width: 13px;
+        border: 0;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+      .lf-progress::-ms-track {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      .lf-progress::-ms-fill-lower {
+        background: #ccc;
+        border-radius: 3px;
+      }
+      .lf-progress::-ms-fill-upper {
+        background: #ccc;
+        border-radius: 3px;
+      }
+      .lf-progress::-ms-thumb {
+        border: 0;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: #0fccce;
+        cursor: pointer;
+      }
+      .lf-progress:focus::-ms-fill-lower {
+        background: #ccc;
+      }
+      .lf-progress:focus::-ms-fill-upper {
+        background: #ccc;
+      }
+      .lf-player-container :focus {
+        outline: 0;
+      }
+      .lf-popover {
+        position: relative;
+      }
+
+      .lf-popover-content {
+        display: inline-block;
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, -10px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      }
+
+      .lf-popover-content.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 0px);
+      }
+
+      .lf-player-btn-container {
+        display: flex;
+        align-items: center;
+      }
+      .lf-player-btn {
+        cursor: pointer;
+        fill: #999;
+        width: 14px;
+      }
+
+      .lf-player-btn.active {
+        fill: #555;
+      }
+
+      .lf-popover {
+        position: relative;
+      }
+
+      .lf-popover-content {
+        display: inline-block;
+        position: absolute;
+        background-color: #ffffff;
+        opacity: 1;
+
+        transform: translate(0, -10px);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+        padding: 10px;
+      }
+
+      .lf-popover-content.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 0px);
+      }
+
+      .lf-arrow {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        bottom: -9px;
+        border-style: solid;
+        border-width: 10px 10px 0px 10px;
+      }
+
+      .lf-left-align,
+      .lf-left-align .lfarrow {
+        left: 0;
+        right: unset;
+      }
+
+      .lf-right-align,
+      .lf-right-align .lf-arrow {
+        right: 0;
+        left: unset;
+      }
+
+      .lf-text-input {
+        border: 1px #ccc solid;
+        border-radius: 5px;
+        padding: 3px;
+        width: 60px;
+        margin: 0;
+      }
+
+      .lf-color-picker {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 90px;
+      }
+
+      .lf-color-selectors {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .lf-color-component {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lf-color-component strong {
+        width: 40px;
+      }
+
+      .lf-color-component input[type="range"] {
+        margin: 0 0 0 10px;
+      }
+
+      .lf-color-component input[type="number"] {
+        width: 50px;
+        margin: 0 0 0 10px;
+      }
+
+      .lf-color-preview {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+      }
+
+      .lf-preview {
+        height: 60px;
+        width: 60px;
+      }
+
+      .lf-popover-snapshot {
+        width: 150px;
+      }
+      .lf-popover-snapshot h5 {
+        margin: 5px 0 10px 0;
+        font-size: 0.75rem;
+      }
+      .lf-popover-snapshot a {
+        display: block;
+        text-decoration: none;
+      }
+      .lf-popover-snapshot a:before {
+        content: "⥼";
+        margin-right: 5px;
+      }
+      .lf-popover-snapshot .lf-note {
+        display: block;
+        margin-top: 10px;
+        color: #999;
+      }
+      .lf-player-controls > div {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+      .lf-player-controls > div:first-child {
+        margin-left: 0px;
+      }
+      .lf-player-controls > div:last-child {
+        margin-right: 0px;
+      }
+    </style>
+    <style>
+      .eLang-loader-container {
+        width: 130px;
+        height: 41px;
+        background-color: #fff;
+        border-radius: 4px;
+        position: relative;
+      }
+      .eLang-loader-arrow {
+        position: absolute;
+        bottom: -11px;
+        color: #fff;
+        left: calc(50% - 15px);
+      }
+      .eLang-revert-arrow {
+        top: -11px;
+        transform: rotate(180deg);
+      }
+      .eLang-loader-container-dark {
+        background-color: #262835;
+      }
+      .eLang-loader-arrow-dark {
+        color: #262835;
+      }
+      .eLang-loader {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+        -webkit-animation: loading 0.45s 0.15s ease alternate infinite;
+        animation: loading 0.45s 0.15s ease alternate infinite;
+        margin: 0 auto;
+      }
+
+      .eLang-loader:after,
+      .eLang-loader:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: loading 0.45s ease alternate infinite;
+        -webkit-animation: loading 0.45s ease alternate infinite;
+      }
+
+      .eLang-loader-dark {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+
+        -webkit-animation: loading-dark 0.45s 0.15s ease alternate infinite;
+        animation: loading-dark 0.45s 0.15s ease alternate infinite;
+        margin: 0 auto;
+      }
+
+      .eLang-loader-dark:after,
+      .eLang-loader-dark:before {
+        content: "";
+        position: absolute;
+
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: loading-dark 0.45s ease alternate infinite;
+        -webkit-animation: loading-dark 0.45s ease alternate infinite;
+      }
+
+      .eLang-loader:before {
+        left: -20px;
+        animation-delay: 0s;
+      }
+
+      .eLang-loader:after {
+        right: -20px;
+        animation-delay: 0.4s;
+      }
+
+      .eLang-loader-dark:before {
+        left: -20px;
+        animation-delay: 0s;
+      }
+
+      .eLang-loader-dark:after {
+        right: -20px;
+        animation-delay: 0.4s;
+      }
+
+      @keyframes loading {
+        0% {
+          box-shadow: 0 15px 0 -15px rgba(79, 110, 253, 1);
+        }
+        100% {
+          box-shadow: 0 15px 0 rgba(79, 110, 253, 1);
+        }
+      }
+
+      @-webkit-keyframes loading {
+        0% {
+          box-shadow: 0 15px 0 -15px rgba(79, 110, 253, 1);
+        }
+        100% {
+          box-shadow: 0 15px 0 rgba(79, 110, 253, 1);
+        }
+      }
+      @keyframes loading-dark {
+        0% {
+          box-shadow: 0 15px 0 -15px rgba(115, 139, 251, 1);
+        }
+        100% {
+          box-shadow: 0 15px 0 rgba(115, 139, 251, 1);
+        }
+      }
+
+      @-webkit-keyframes loading-dark {
+        0% {
+          box-shadow: 0 15px 0 -15px rgba(115, 139, 251, 1);
+        }
+        100% {
+          box-shadow: 0 15px 0 rgba(115, 139, 251, 1);
+        }
+      }
+    </style>
+  </head>
+  <body style>
+    <div id="root">
+      <div
+        role="region"
+        aria-label="Notifications (F8)"
+        tabindex="-1"
+        style="pointer-events: none"
+      >
+        <ol
+          tabindex="-1"
+          class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+        ></ol>
+      </div>
+      <section
+        aria-label="Notifications alt+T"
+        tabindex="-1"
+        aria-live="polite"
+        aria-relevant="additions text"
+        aria-atomic="false"
+      ></section>
+      <div class="min-h-screen bg-background">
+        <div class="fixed inset-0 pointer-events-none overflow-hidden">
+          <div
+            class="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-scan-line"
+          ></div>
+        </div>
+        <div class="w-full overflow-hidden bg-card/50 border-b border-border">
+          <div
+            class="flex animate-marquee whitespace-nowrap py-2"
+            style="
+              animation: 60s linear 0s infinite normal none running marquee;
+            "
+          >
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">BTC/USDT</span
+              ><span class="text-muted-foreground">$80,374.00</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+2.16%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">ETH/USDT</span
+              ><span class="text-muted-foreground">$2,362.72</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+1.50%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">XRP/USDT</span
+              ><span class="text-muted-foreground">$1.41</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.77%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">SOL/USDT</span
+              ><span class="text-muted-foreground">$84.82</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.80%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">LINK/USDT</span
+              ><span class="text-muted-foreground">$9.43</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+2.99%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">HBAR/USDT</span
+              ><span class="text-muted-foreground">$0.0880</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.06%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">TAO/USDT</span
+              ><span class="text-muted-foreground">$280.89</span
+              ><span class="flex items-center gap-1 text-xs text-destructive"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-down h-3 w-3"
+                >
+                  <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                  <polyline points="16 17 22 17 22 11"></polyline></svg
+                >-3.23%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">XAUT/USDT</span
+              ><span class="text-muted-foreground">$4,523.17</span
+              ><span class="flex items-center gap-1 text-xs text-destructive"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-down h-3 w-3"
+                >
+                  <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                  <polyline points="16 17 22 17 22 11"></polyline></svg
+                >-1.89%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">BTC/USDT</span
+              ><span class="text-muted-foreground">$80,374.00</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+2.16%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">ETH/USDT</span
+              ><span class="text-muted-foreground">$2,362.72</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+1.50%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">XRP/USDT</span
+              ><span class="text-muted-foreground">$1.41</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.77%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">SOL/USDT</span
+              ><span class="text-muted-foreground">$84.82</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.80%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">LINK/USDT</span
+              ><span class="text-muted-foreground">$9.43</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+2.99%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">HBAR/USDT</span
+              ><span class="text-muted-foreground">$0.0880</span
+              ><span class="flex items-center gap-1 text-xs text-success"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up h-3 w-3"
+                >
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline></svg
+                >+0.06%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">TAO/USDT</span
+              ><span class="text-muted-foreground">$280.89</span
+              ><span class="flex items-center gap-1 text-xs text-destructive"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-down h-3 w-3"
+                >
+                  <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                  <polyline points="16 17 22 17 22 11"></polyline></svg
+                >-3.23%</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 px-6 font-mono text-sm">
+              <span class="text-foreground font-medium">XAUT/USDT</span
+              ><span class="text-muted-foreground">$4,523.17</span
+              ><span class="flex items-center gap-1 text-xs text-destructive"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-down h-3 w-3"
+                >
+                  <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
+                  <polyline points="16 17 22 17 22 11"></polyline></svg
+                >-1.89%</span
+              >
+            </div>
+          </div>
+          <style>
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .animate-marquee {
+              animation: marquee 60s linear infinite;
+            }
+            .animate-marquee:hover {
+              animation-play-state: paused;
+            }
+          </style>
+        </div>
+        <header
+          class="border-b border-border sticky top-0 z-50 bg-background/80 backdrop-blur"
+        >
+          <div class="px-4 py-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <img src="/favicon.svg" alt="AlterHedge" class="h-8 w-8" /><span
+                  class="font-bold text-foreground hidden sm:inline"
+                  >ALTERHEDGE</span
+                >
+                <div class="h-6 w-px bg-border"></div>
+                <div class="flex items-center gap-2">
+                  <div
+                    class="rounded-full animate-pulse-glow h-3 w-3 bg-destructive box-glow-destructive"
+                  ></div>
+                  <span class="text-sm text-muted-foreground font-mono"
+                    >BOT OFF</span
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="text-right hidden sm:block">
+                  <p class="text-xs text-muted-foreground">UTC</p>
+                  <p class="font-mono text-sm text-foreground">17:13:01</p>
+                </div>
+                <button
+                  class="p-2 rounded-lg bg-muted/50 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                  aria-controls="radix-:r0:"
+                  data-state="closed"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-settings h-5 w-5"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg></button
+                ><button
+                  class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30 transition-colors font-mono text-sm"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user h-4 w-4"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle></svg
+                  >Sign In
+                </button>
+                <div class="flex items-center gap-2" data-state="closed">
+                  <span
+                    class="text-xs font-mono uppercase tracking-wider text-muted-foreground"
+                    >OFF</span
+                  ><button
+                    type="button"
+                    role="switch"
+                    aria-checked="false"
+                    data-state="unchecked"
+                    data-disabled=""
+                    disabled=""
+                    value="on"
+                    class="peer inline-flex h-6 w-11 shrink-0 items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-success data-[state=unchecked]:bg-muted opacity-50 cursor-not-allowed"
+                  >
+                    <span
+                      data-state="unchecked"
+                      data-disabled=""
+                      class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="p-4 space-y-4">
+          <div
+            class="p-3 rounded-lg border border-primary/30 bg-primary/10 flex items-center gap-3"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user h-4 w-4 text-primary flex-shrink-0"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <p class="text-sm text-primary">
+              Inicia sesión para ver tus datos de trading en tiempo real.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div
+              class="relative overflow-hidden rounded-lg border bg-card p-4 gradient-border border-border"
+            >
+              <div class="flex items-start justify-between">
+                <div class="space-y-1">
+                  <p
+                    class="text-xs font-medium text-muted-foreground uppercase tracking-wider"
+                  >
+                    Balance
+                  </p>
+                  <p class="text-2xl font-bold font-mono text-foreground">
+                    $0.00
+                  </p>
+                  <p class="text-xs text-muted-foreground font-mono">
+                    No data yet
+                  </p>
+                </div>
+                <div class="p-2 rounded-md bg-muted/50 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-wallet h-5 w-5"
+                  >
+                    <path
+                      d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"
+                    ></path>
+                    <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden rounded-lg border bg-card p-4 gradient-border border-border"
+            >
+              <div class="flex items-start justify-between">
+                <div class="space-y-1">
+                  <p
+                    class="text-xs font-medium text-muted-foreground uppercase tracking-wider"
+                  >
+                    Today PnL
+                  </p>
+                  <p class="text-2xl font-bold font-mono text-foreground">—</p>
+                  <p class="text-xs text-muted-foreground font-mono">
+                    No trades today
+                  </p>
+                </div>
+                <div class="p-2 rounded-md bg-muted/50 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-5 w-5"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden rounded-lg border bg-card p-4 gradient-border border-border"
+            >
+              <div class="flex items-start justify-between">
+                <div class="space-y-1">
+                  <p
+                    class="text-xs font-medium text-muted-foreground uppercase tracking-wider"
+                  >
+                    Open Positions
+                  </p>
+                  <p class="text-2xl font-bold font-mono text-foreground">0</p>
+                  <p class="text-xs text-muted-foreground font-mono">
+                    No positions
+                  </p>
+                </div>
+                <div class="p-2 rounded-md bg-muted/50 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-activity h-5 w-5"
+                  >
+                    <path
+                      d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden rounded-lg border bg-card p-4 gradient-border border-border"
+            >
+              <div class="flex items-start justify-between">
+                <div class="space-y-1">
+                  <p
+                    class="text-xs font-medium text-muted-foreground uppercase tracking-wider"
+                  >
+                    Win Rate
+                  </p>
+                  <p class="text-2xl font-bold font-mono text-foreground">—</p>
+                  <p class="text-xs text-muted-foreground font-mono">
+                    No trades today
+                  </p>
+                </div>
+                <div class="p-2 rounded-md bg-muted/50 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chart-column h-5 w-5"
+                  >
+                    <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                    <path d="M18 17V9"></path>
+                    <path d="M13 17V5"></path>
+                    <path d="M8 17v-3"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-1 overflow-x-auto scrollbar-hide">
+            <button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-primary/10 border-primary/30"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-primary">BTC/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+2.16%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$80,374</span><span>Vol: 56061.4M</span>
+              </div></button
+            ><button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-card/50 border-border"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-foreground">ETH/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+1.50%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$2,362.72</span><span>Vol: 24770.7M</span>
+              </div></button
+            ><button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-card/50 border-border"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-foreground">XRP/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+0.77%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$1.41</span><span>Vol: 2579.7M</span>
+              </div></button
+            ><button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-card/50 border-border"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-foreground">SOL/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+0.80%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$84.82</span><span>Vol: 4550.3M</span>
+              </div></button
+            ><button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-card/50 border-border"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-foreground">LINK/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+2.99%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$9.43</span><span>Vol: 575.2M</span>
+              </div></button
+            ><button
+              class="flex-shrink-0 px-4 py-2 rounded-lg font-mono text-sm transition-all border hover:border-primary/30 bg-card/50 border-border"
+            >
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-foreground">HBAR/USDT</span>
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trending-up h-3 w-3 text-success"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline></svg
+                  ><span class="text-xs text-success">+0.06%</span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between mt-1 text-xs text-muted-foreground"
+              >
+                <span>$0.088</span><span>Vol: 62.0M</span>
+              </div>
+            </button>
+          </div>
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-12 lg:col-span-8 space-y-4">
+              <div
+                class="rounded-lg border border-border bg-card/30 overflow-hidden"
+              >
+                <div
+                  class="flex items-center justify-between p-3 border-b border-border"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono font-bold text-foreground"
+                      >BTC/USDT</span
+                    ><span
+                      class="px-1.5 py-0.5 text-[10px] font-medium bg-success/20 text-success rounded"
+                      >LIVE</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      1m</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      5m</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      15m</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors bg-primary/20 text-primary"
+                    >
+                      30m</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      1H</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      4H</button
+                    ><button
+                      class="px-2 py-1 text-xs font-mono rounded transition-colors text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    >
+                      1D
+                    </button>
+                  </div>
+                </div>
+                <div style="height: 500px">
+                  <div
+                    class="tradingview-widget-container"
+                    style="height: 100%; width: 100%"
+                  >
+                    <iframe
+                      scrolling="no"
+                      allowtransparency="true"
+                      frameborder="0"
+                      src="https://www.tradingview-widget.com/embed-widget/advanced-chart/?locale=en#%7B%22autosize%22%3Atrue%2C%22symbol%22%3A%22WEEX%3ABTCUSDT%22%2C%22interval%22%3A%2230%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22theme%22%3A%22dark%22%2C%22style%22%3A%221%22%2C%22backgroundColor%22%3A%22rgba(10%2C%2010%2C%2010%2C%201)%22%2C%22gridColor%22%3A%22rgba(43%2C%2043%2C%2043%2C%200.06)%22%2C%22hide_top_toolbar%22%3Afalse%2C%22hide_legend%22%3Afalse%2C%22allow_symbol_change%22%3Atrue%2C%22save_image%22%3Afalse%2C%22hide_volume%22%3Afalse%2C%22support_host%22%3A%22https%3A%2F%2Fwww.tradingview.com%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22utm_source%22%3A%22lambent-muffin-755268.netlify.app%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22advanced-chart%22%2C%22page-uri%22%3A%22lambent-muffin-755268.netlify.app%2F%22%7D"
+                      title="advanced chart TradingView widget"
+                      lang="en"
+                      style="
+                        user-select: none;
+                        box-sizing: border-box;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                      "
+                    ></iframe
+                    ><style>
+                      .tradingview-widget-copyright {
+                        font-size: 13px !important;
+                        line-height: 32px !important;
+                        text-align: center !important;
+                        vertical-align: middle !important;
+                        /* @mixin sf-pro-display-font; */
+                        font-family:
+                          -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+                          Roboto, Ubuntu, sans-serif !important;
+                        color: #b2b5be !important;
+                      }
+
+                      .tradingview-widget-copyright .blue-text {
+                        color: #2962ff !important;
+                      }
+
+                      .tradingview-widget-copyright a {
+                        text-decoration: none !important;
+                        color: #b2b5be !important;
+                      }
+
+                      .tradingview-widget-copyright a:visited {
+                        color: #b2b5be !important;
+                      }
+
+                      .tradingview-widget-copyright a:hover .blue-text {
+                        color: #1e53e5 !important;
+                      }
+
+                      .tradingview-widget-copyright a:active .blue-text {
+                        color: #1848cc !important;
+                      }
+
+                      .tradingview-widget-copyright a:visited .blue-text {
+                        color: #2962ff !important;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="rounded-lg border border-border bg-card/30 overflow-hidden"
+                >
+                  <div class="px-3 py-2 border-b border-border">
+                    <span class="font-mono text-sm text-foreground"
+                      >Order Book</span
+                    >
+                  </div>
+                  <div
+                    class="grid grid-cols-3 gap-2 px-3 py-1 text-xs text-muted-foreground font-mono border-b border-border/50"
+                  >
+                    <span>Price</span><span class="text-right">Amount</span
+                    ><span class="text-right">Total</span>
+                  </div>
+                  <div class="max-h-[140px] overflow-hidden">
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 100%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97305.44</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.1775</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >10.9229</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 89.2195%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97286.01</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.5223</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >9.7454</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 75.2827%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97266.58</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >0.8810</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >8.2231</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 67.2171%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97247.15</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.1421</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >7.3421</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 56.7612%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97227.72</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.2540</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >6.2000</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 45.2806%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97208.29</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >2.4297</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >4.9460</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 23.0364%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97188.86</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.2680</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >2.5162</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-destructive/10"
+                        style="width: 11.4277%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-destructive">97169.43</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.2482</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.2482</span
+                      >
+                    </div>
+                  </div>
+                  <div class="px-3 py-2 bg-muted/30 border-y border-border/50">
+                    <div class="flex items-center justify-between font-mono">
+                      <span class="text-primary font-bold">$97150.00</span
+                      ><span class="text-xs text-muted-foreground"
+                        >Spread: 0.01%</span
+                      >
+                    </div>
+                  </div>
+                  <div class="max-h-[140px] overflow-hidden">
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 18.9376%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97130.57</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >2.0685</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >2.0685</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 26.3193%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97111.14</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >0.8063</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >2.8748</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 37.9593%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97091.71</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.2714</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >4.1463</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 44.7778%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97072.28</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >0.7448</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >4.8910</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 62.43%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97052.85</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.9281</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >6.8192</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 78.3123%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97033.42</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.7348</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >8.5540</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 87.9568%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">97013.99</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.0535</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >9.6074</span
+                      >
+                    </div>
+                    <div
+                      class="relative grid grid-cols-3 gap-2 px-3 py-0.5 text-xs font-mono"
+                    >
+                      <div
+                        class="absolute inset-0 bg-success/10"
+                        style="width: 98.1154%; right: 0px; left: auto"
+                      ></div>
+                      <span class="relative text-success">96994.56</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >1.1096</span
+                      ><span class="relative text-right text-muted-foreground"
+                        >10.7170</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <h2
+                    class="text-xs font-medium text-muted-foreground uppercase tracking-wider flex items-center gap-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-trending-up h-3 w-3 text-success"
+                    >
+                      <polyline
+                        points="22 7 13.5 15.5 8.5 10.5 2 17"
+                      ></polyline>
+                      <polyline points="16 7 22 7 22 13"></polyline></svg
+                    >Open Positions
+                  </h2>
+                  <div
+                    class="p-4 rounded-lg border border-dashed border-border text-center"
+                  >
+                    <p class="text-sm text-muted-foreground font-mono">
+                      No open positions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4 space-y-4">
+              <div
+                class="rounded-lg border p-4 gradient-border bg-success/10 border-success/30"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="p-3 rounded-lg bg-card text-success">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-trending-up h-6 w-6"
+                    >
+                      <polyline
+                        points="22 7 13.5 15.5 8.5 10.5 2 17"
+                      ></polyline>
+                      <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono font-bold text-lg text-success"
+                        >TREND</span
+                      ><span class="text-xs text-muted-foreground font-mono"
+                        >0% conf.</span
+                      >
+                    </div>
+                    <p class="text-sm text-muted-foreground">
+                      EMA Crossover Active
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-3 h-1.5 bg-muted rounded-full overflow-hidden">
+                  <div
+                    class="h-full rounded-full transition-all duration-500 bg-success"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+              <div class="p-3 rounded-lg border border-border bg-card/30">
+                <h2
+                  class="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-triangle-alert h-3 w-3 text-warning"
+                  >
+                    <path
+                      d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+                    ></path>
+                    <path d="M12 9v4"></path>
+                    <path d="M12 17h.01"></path></svg
+                  >Risk Engine
+                </h2>
+                <div class="space-y-3">
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="text-xs text-muted-foreground uppercase tracking-wider"
+                        >Drawdown</span
+                      ><span class="font-mono font-bold text-success"
+                        >0.0%</span
+                      >
+                    </div>
+                    <div class="h-2 bg-muted rounded-full overflow-hidden">
+                      <div
+                        class="h-full rounded-full transition-all duration-500 bg-success box-glow-success"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <div
+                      class="flex justify-between text-xs text-muted-foreground font-mono"
+                    >
+                      <span>0%</span><span class="text-warning">50%</span
+                      ><span class="text-destructive">75%</span><span>8%</span>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="text-xs text-muted-foreground uppercase tracking-wider"
+                        >Daily Loss</span
+                      ><span class="font-mono font-bold text-success"
+                        >0.0%</span
+                      >
+                    </div>
+                    <div class="h-2 bg-muted rounded-full overflow-hidden">
+                      <div
+                        class="h-full rounded-full transition-all duration-500 bg-success box-glow-success"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <div
+                      class="flex justify-between text-xs text-muted-foreground font-mono"
+                    >
+                      <span>0%</span><span class="text-warning">60%</span
+                      ><span class="text-destructive">80%</span><span>3%</span>
+                    </div>
+                  </div>
+                  <div
+                    class="grid grid-cols-2 gap-2 text-xs font-mono pt-2 border-t border-border/50"
+                  >
+                    <div class="flex justify-between">
+                      <span class="text-muted-foreground">Losses:</span
+                      ><span class="text-foreground">0/3</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-muted-foreground">Lev:</span
+                      ><span class="text-foreground">5x</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2
+                  class="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-zap h-3 w-3 text-primary"
+                  >
+                    <path
+                      d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                    ></path></svg
+                  >AI Decisions
+                </h2>
+                <div class="space-y-2 max-h-[280px] overflow-y-auto pr-1">
+                  <p
+                    class="text-xs text-muted-foreground font-mono p-3 text-center"
+                  >
+                    No AI decisions yet
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border border-border bg-card/30">
+            <div
+              class="flex items-center justify-between p-4 border-b border-border"
+            >
+              <div class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-activity h-4 w-4 text-primary"
+                >
+                  <path
+                    d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
+                  ></path>
+                </svg>
+                <h2 class="font-semibold text-foreground">Activity Log</h2>
+                <span class="text-xs text-muted-foreground font-mono"
+                  >(0 entries)</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <button
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-3 h-8"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-refresh-cw h-3 w-3 mr-1"
+                  >
+                    <path
+                      d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                    ></path>
+                    <path d="M21 3v5h-5"></path>
+                    <path
+                      d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                    ></path>
+                    <path d="M8 16H3v5"></path></svg
+                  >Refresh</button
+                ><button
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-3 h-8"
+                  disabled=""
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-download h-3 w-3 mr-1"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" x2="12" y1="15" y2="3"></line></svg
+                  >Export
+                </button>
+              </div>
+            </div>
+            <div class="p-3 border-b border-border">
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path></svg
+                ><input
+                  class="flex w-full rounded-md border px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm pl-9 h-8 bg-background border-border font-mono text-sm"
+                  placeholder="Search logs..."
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="max-h-[400px] overflow-y-auto">
+              <div
+                class="p-8 text-center text-muted-foreground font-mono text-sm"
+              >
+                No activity logs yet
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border border-border bg-card/30 p-3">
+            <h2
+              class="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3"
+            >
+              Trade History
+            </h2>
+            <p class="text-sm text-muted-foreground font-mono text-center py-6">
+              No closed trades yet
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 py-2 px-3 rounded-lg border border-border bg-card/20 font-mono text-xs"
+          >
+            <div class="flex items-center gap-4">
+              <div>
+                <span class="text-muted-foreground">Exchanges: </span
+                ><span class="text-warning">None configured</span>
+              </div>
+              <div>
+                <span class="text-muted-foreground">Bot: </span
+                ><span class="text-destructive">DISABLED</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div>
+                <span class="text-muted-foreground">Mode: </span
+                ><span class="text-primary uppercase">futures</span>
+              </div>
+              <div>
+                <span class="text-muted-foreground">Model: </span
+                ><span class="text-primary">XGBoost + PPO</span>
+              </div>
+              <div>
+                <span class="text-muted-foreground">Pairs: </span
+                ><span class="text-foreground"
+                  >BTC/USDT, ETH/USDT, SOL/USDT</span
+                >
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="elangExtension" id="elangExtension">
+      <div
+        class="elang_popup_window_wrapper"
+        style="position: absolute; z-index: 9999; top: 1056px; left: 561.875px"
+      ></div>
+    </div>
+    <div class="ReactModalPortal"></div>
+  </body>
+</html>
